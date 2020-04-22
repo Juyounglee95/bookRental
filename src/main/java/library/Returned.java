@@ -10,6 +10,13 @@ public class Returned extends AbstractEvent {
         super();
     }
 
+
+    public Returned(BookRentalSystem bookRentalSystem){
+        this();
+        this.setId(bookRentalSystem.getId());
+        this.setBookStatus(bookRentalSystem.getBookStatus());
+        this.setBookName(bookRentalSystem.getBookName());
+    }
     public Long getId() {
         return id;
     }

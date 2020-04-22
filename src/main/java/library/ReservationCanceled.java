@@ -6,6 +6,13 @@ public class ReservationCanceled extends AbstractEvent {
     private String bookName;
     private String bookStatus;
 
+    public ReservationCanceled(BookRentalSystem bookRentalSystem){
+        this();
+        this.setId(bookRentalSystem.getId());
+        this.setBookName(bookRentalSystem.getBookName());
+        this.setBookStatus(bookRentalSystem.getBookStatus());
+
+    }
     public ReservationCanceled(){
         super();
     }

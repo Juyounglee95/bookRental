@@ -12,10 +12,10 @@ import java.util.Date;
  * Created by uengine on 2018. 11. 21..
  */
 
-@FeignClient(name="point", url="http://point:8080")
+@FeignClient(name="point", url="http://localhost:8084")
 public interface PointSystemService {
 
-    @RequestMapping(method= RequestMethod.POST, path="/pointSystems")
+    @RequestMapping(method= RequestMethod.POST, path="/pointSystems", consumes = "application/json")
     public void usePoints(@RequestBody PointSystem pointSystem);
 
 }

@@ -6,6 +6,13 @@ public class Reserved extends AbstractEvent {
     private String bookName;
     private String bookStatus;
 
+    public Reserved(BookRentalSystem bookRentalSystem){
+        this();
+        this.setId(bookRentalSystem.getId());
+        this.setBookName(bookRentalSystem.getBookName());
+        this.setBookStatus(bookRentalSystem.getBookStatus());
+    }
+
     public Reserved(){
         super();
     }
